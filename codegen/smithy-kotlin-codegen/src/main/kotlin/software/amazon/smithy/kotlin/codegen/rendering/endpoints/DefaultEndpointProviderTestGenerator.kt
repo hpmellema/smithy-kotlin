@@ -72,7 +72,7 @@ class DefaultEndpointProviderTestGenerator(
                 writer.withBlock(
                     "if (actual.attributes.contains(#T) || actual.attributes.contains(#T)) {",
                     "} else { assertEquals(expected, actual) }",
-                    RuntimeTypes.Core.BusinessMetrics.ServiceEndpointOverride,
+                    RuntimeTypes.Core.BusinessMetrics.EndpointOverride,
                     RuntimeTypes.Core.BusinessMetrics.AccountIdBasedEndpointAccountId,
                 ) {
                     writer.write(
@@ -81,7 +81,7 @@ class DefaultEndpointProviderTestGenerator(
                     )
                     writer.write(
                         "newActualAttributes.remove(#T)",
-                        RuntimeTypes.Core.BusinessMetrics.ServiceEndpointOverride,
+                        RuntimeTypes.Core.BusinessMetrics.EndpointOverride,
                     )
                     writer.write(
                         "newActualAttributes.remove(#T)",
